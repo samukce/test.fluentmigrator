@@ -152,14 +152,14 @@ namespace Test.FluentMigrator.Test {
         [Test]
         public void ShouldThrowAllExceptions() {
             var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_table_and_column_missing_a)
-                                                .ObjectiveDatabase(Resources.script_schema_table_and_column_missing_b);
+                                                 .ObjectiveDatabase(Resources.script_schema_table_and_column_missing_b);
 
             try {
                 databaseTest.Compare();
                 Assert.Fail();
             } catch (MigrationFailedException ex) {
-                Assert.AreEqual("Column campo01 was not found in table dbo.TABLE2 in the database TEST_DATABASE.\r\n" +
-                                "Table dbo.TABLE1 was not found in the database TEST_DATABASE.\r\n",
+                Assert.AreEqual("The column01 Column was not found in the dbo.TABLE2 table in the TEST_ACTUAL database.\r\n" +
+                                "The dbo.TABLE1 Table was not found in the TEST_ACTUAL database.\r\n",
                                 ex.Message);
             }
         }

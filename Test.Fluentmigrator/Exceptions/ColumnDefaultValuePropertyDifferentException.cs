@@ -2,12 +2,12 @@
 
 namespace Test.Fluentmigrator.Exceptions {
     public class ColumnDefaultValuePropertyDifferentException : MigrationFailedException {
-        public ColumnDefaultValuePropertyDifferentException(string databaseName, string tableName, string columnName, string actual, string objective)
-            : base(GetMessage(databaseName, tableName, columnName, actual, objective)) { }
+        public ColumnDefaultValuePropertyDifferentException(string databaseName, string tableName, string columnName, string objective, string actual)
+            : base(GetMessage(databaseName, tableName, columnName, objective, actual)) { }
 
         private static string GetMessage(string database, string tableName, string column,
-                                         string actual, string objective) {
-            var message = new StringBuilder(string.Format("Column {2} in the table {1} in the database {0} ", database, tableName, column));
+                                         string objective, string actual) {
+            var message = new StringBuilder(string.Format("The {2} Column in the {1} table in the {0} database ", database, tableName, column));
 
             if (objective == null && actual != null) {
                 message.Append($"should not have default value but is {actual}.");
