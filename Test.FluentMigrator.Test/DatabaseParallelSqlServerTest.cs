@@ -159,7 +159,7 @@ namespace Test.FluentMigrator.Test {
                 Assert.Fail();
             } catch (MigrationFailedException ex) {
                 Assert.AreEqual("The column01 Column was not found in the dbo.TABLE2 table in the TEST_ACTUAL database.\r\n" +
-                                "The dbo.TABLE1 Table was not found in the TEST_ACTUAL database.\r\n",
+                                "The dbo.TABLE3 table was not found in the TEST_ACTUAL database.\r\n",
                                 ex.Message);
             }
         }

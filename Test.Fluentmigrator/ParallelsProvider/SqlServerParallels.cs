@@ -84,10 +84,74 @@ namespace Test.Fluentmigrator.ParallelsProvider {
                     AddException(new ColumnDefaultValuePropertyDifferentException(databaseName, nomeTabelaA, columnA.Name, columnB.DefaultConstraint?.Text, columnA.DefaultConstraint?.Text));
             }
 
-           // Uniques(databaseName, tableA, tableB);
-          //  Indices(databaseName, tableA, tableB);
-           // ForeignKeys(databaseName, tableA, tableB);
-          //  Triggers(databaseName, tableA, tableB);
+            Uniques(databaseName, tableA, tableB);
+            Indices(databaseName, tableA, tableB);
+            ForeignKeys(databaseName, tableA, tableB);
+            Triggers(databaseName, tableA, tableB);
+        }
+
+        private void Uniques(string bancoA, Table tabelaA, Table tabelaB) {
+            var nomeTabelaB = string.Format(TableNameFormat, tabelaB.Schema, tabelaB.Name);
+
+            foreach (Index indiceB in tabelaB.Indexes) {
+                if (indiceB.IndexKeyType != IndexKeyType.DriUniqueKey)
+                    continue;
+
+                if (!tabelaA.Indexes.Contains(indiceB.Name)) {
+                    AddException(new UniqueNotFoundException(bancoA, nomeTabelaB, indiceB.Name));
+                    continue;
+                }
+
+                var indiceA = tabelaA.Indexes[indiceB.Name];
+
+                foreach (IndexedColumn indexedColumnB in indiceB.IndexedColumns) {
+                    if (!indiceA.IndexedColumns.Contains(indexedColumnB.Name))
+                        AddException(new UniqueColumnNotIncludedException(bancoA, nomeTabelaB, indexedColumnB.Name, indiceB.Name));
+                }
+            }
+        }
+
+        private void Indices(string database, Table tableA, Table tableB) {
+            var tableNameB = string.Format(TableNameFormat, tableB.Schema, tableB.Name);
+
+            foreach (Index indexB in tableB.Indexes) {
+                if (indexB.IndexKeyType != IndexKeyType.None)
+                    continue;
+
+                if (!tableA.Indexes.Contains(indexB.Name)) {
+                    AddException(new IndexeNotFoundException(database, tableNameB, indexB.Name));
+                    continue;
+                }
+
+                var indexA = tableA.Indexes[indexB.Name];
+
+                foreach (IndexedColumn indexedColumnB in indexB.IndexedColumns) {
+                    if (!indexA.IndexedColumns.Contains(indexedColumnB.Name))
+                        AddException(new IndexeColumnNotIncludedException(database, tableNameB, indexedColumnB.Name, indexB.Name));
+                }
+            }
+        }
+
+        private void ForeignKeys(string database, Table tableA, Table tableB) {
+            var tableNameA = string.Format(TableNameFormat, tableA.Schema, tableA.Name);
+
+            foreach (ForeignKey foreignKeyB in tableB.ForeignKeys) {
+                if (!tableA.ForeignKeys.Contains(foreignKeyB.Name))
+                    AddException(new ForeignKeyNotFoundException(database, tableNameA, foreignKeyB.Name));
+            }
+        }
+
+        private void Triggers(string database, Table tableA, Table tableB) {
+            var nomeTabelaA = string.Format(TableNameFormat, tableA.Schema, tableA.Name);
+
+            foreach (Trigger triggerB in tableB.Triggers) {
+
+                if (!tableA.Triggers.Contains(triggerB.Name)) {
+                    var triggerContent = $"{triggerB.TextHeader}\r\n{triggerB.TextBody}";
+
+                    AddException(new TriggerNotFoundException(database, nomeTabelaA, triggerB.Name, triggerContent));
+                }
+            }
         }
 
         private void AddException(MigrationFailedException exception) {
