@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>ee0765e6-9dce-4082-a151-350e6da20f51</ProjectGuid>
+    <ProjectGuid>{EE0765E6-9DCE-4082-A151-350E6DA20F51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Test.Fluentmigrator</RootNamespace>
@@ -30,25 +30,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\SqlServerConfiguration.cs" />
+    <Compile Include="DatabaseInfo.cs" />
+    <Compile Include="DatabaseTest.cs" />
+    <Compile Include="Exceptions\ColumnDifferentScaleException.cs" />
+    <Compile Include="Exceptions\ColumnDifferentPrecisionException.cs" />
+    <Compile Include="Exceptions\ColumnDifferentSizeException.cs" />
+    <Compile Include="Exceptions\ColumnIdentityPropertyNotFoundException.cs" />
+    <Compile Include="Exceptions\ColumnDefaultValuePropertyDifferentException.cs" />
+    <Compile Include="Exceptions\TriggerNotFoundException.cs" />
+    <Compile Include="Exceptions\ForeignKeyNotFoundException.cs" />
+    <Compile Include="Exceptions\ColumnNotFoundException.cs" />
+    <Compile Include="Exceptions\ColumnDifferentTypeException.cs" />
+    <Compile Include="Exceptions\IndexeNotFoundException.cs" />
+    <Compile Include="Exceptions\IndexeColumnNotIncludedException.cs" />
+    <Compile Include="Exceptions\UniqueColumnNotIncludedException.cs" />
+    <Compile Include="Exceptions\UniqueNotFoundException.cs" />
+    <Compile Include="Exceptions\NullablePropertyDifferentException.cs" />
+    <Compile Include="Exceptions\TableNotFoundException.cs" />
+    <Compile Include="Exceptions\TestFluentMigratorException.cs" />
+    <Compile Include="Interfaces\IConfiguration.cs" />
+    <Compile Include="Interfaces\IParallel.cs" />
+    <Compile Include="Exceptions\MigrationFailedException.cs" />
+    <Compile Include="ParallelsProvider\SqlServerParallels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -57,5 +72,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
