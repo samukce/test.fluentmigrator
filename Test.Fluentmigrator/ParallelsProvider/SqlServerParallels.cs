@@ -37,7 +37,7 @@ namespace Test.Fluentmigrator.ParallelsProvider {
             foreach (Table tableModel in databaseObjective.Tables) {
                 if (!databaseActual.Tables.Contains(tableModel.Name, tableModel.Schema)) {
                     var tableFullName = $"{tableModel.Schema}.{tableModel.Name}";
-                    AddException(new TableNotFoundException(databaseNameToCompare, tableFullName));
+                    AddException(new TableNotFoundException(tableFullName, databaseNameToCompare));
                     continue;
                 }
 
