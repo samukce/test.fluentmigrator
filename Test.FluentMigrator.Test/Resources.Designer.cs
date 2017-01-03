@@ -82,6 +82,20 @@ namespace Test.FluentMigrator.Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (1, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (2, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (3, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (4, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///
+        ///.
+        /// </summary>
+        internal static string script_data_test_migration_database_2_4 {
+            get {
+                return ResourceManager.GetString("script_data_test_migration_database_2_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SET ANSI_NULLS ON
         ///GO
         ///SET QUOTED_IDENTIFIER ON

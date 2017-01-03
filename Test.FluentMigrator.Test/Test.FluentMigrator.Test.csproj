@@ -120,6 +120,7 @@
     <Content Include="Resources.DatabaseParallelSqlServer.Scripts\script_schema_trigger_database_a.txt" />
     <Content Include="Resources.DatabaseParallelSqlServer.Scripts\script_schema_trigger_database_b.txt" />
     <Content Include="Resources.Migration.Scripts\script_data_test_migration_database_1_1.txt" />
+    <Content Include="Resources.Migration.Scripts\script_data_test_migration_database_2_4.txt" />
     <Content Include="Resources.Migration.Scripts\script_data_test_migration_database_1_2.txt" />
     <Content Include="Resources.Migration.Scripts\script_schema_test_migration_database_1_0.txt" />
     <Content Include="Resources.Migration.Scripts\script_schema_test_migration_database_1_1.txt" />
