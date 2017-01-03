@@ -144,7 +144,7 @@ namespace Test.FluentMigrator.Test {
         [Test]
         public void ShouldThrowTriggerNotFoundException() {
             var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_trigger_database_a)
-                                                .ObjectiveDatabase(Resources.script_schema_trigger_database_b);
+                                                 .ObjectiveDatabase(Resources.script_schema_trigger_database_b);
 
             Assert.Throws<TriggerNotFoundException>(() => databaseTest.Compare(false));
         }

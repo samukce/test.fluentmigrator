@@ -21,14 +21,14 @@ namespace Test.Fluentmigrator {
 
         public static string Collation => ConfigKey("Collation");
 
-        public DatabaseTest ActualDatabase(string schemaScript) {
+        public DatabaseTest ActualDatabase(string schemaScript, string dataScript = null) {
             Configuration.LoadInit(new DatabaseInfo {
                 DatabaseName = ActualDatabaseName,
                 ServerHostname = ServerHostname,
                 User = User,
                 Password = Password,
                 Collation = Collation
-            }, schemaScript);
+            }, schemaScript, dataScript);
             return this;
         }
 
@@ -43,7 +43,15 @@ namespace Test.Fluentmigrator {
             return this;
         }
 
-        public DatabaseTest RunMigration() {
+        public DatabaseTest RunMigration(int? specificVersion, string assemblyName = null) {
+            new FluentMigrationRunner().Run(specificVersion, new DatabaseInfo {
+                DatabaseName = ActualDatabaseName,
+                ServerHostname = ServerHostname,
+                User = User,
+                Password = Password,
+                Collation = Collation
+            }, assemblyName);
+
             return this;
         }
 

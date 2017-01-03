@@ -61,6 +61,25 @@ namespace Test.FluentMigrator.Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (1, CAST(0x0000A10E00000000 AS DateTime)).
+        /// </summary>
+        internal static string script_data_test_migration_database_1_1 {
+            get {
+                return ResourceManager.GetString("script_data_test_migration_database_1_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (1, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (2, CAST(0x0000A10E013D7DBC AS DateTime)).
+        /// </summary>
+        internal static string script_data_test_migration_database_1_2 {
+            get {
+                return ResourceManager.GetString("script_data_test_migration_database_1_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SET ANSI_NULLS ON
         ///GO
         ///SET QUOTED_IDENTIFIER ON
@@ -777,17 +796,147 @@ namespace Test.FluentMigrator.Test {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///
+        ///CREATE TABLE [dbo].[VersionInfo](
+        ///	[Version] [bigint] NOT NULL,
+        ///	[AppliedOn] [datetime] NULL,
+        ///	[Description] [nvarchar](1024) NULL
+        ///) ON [PRIMARY]
+        ///
+        ///GO
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///CREATE TABLE [TABLE](
+        ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
+        ///	[column01] [nvarchar](255) NOT NULL,
+        ///	[column02] [nvarchar](255) NULL,
+        ///	[columnInt] [int] NULL,
+        ///	[column_data] [datetime] NULL,
+        ///	[id_TABLE_origin] [bigint] NULL,
+        /// CONSTRAINT  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string script_schema_test_migration_database_1_0 {
+            get {
+                return ResourceManager.GetString("script_schema_test_migration_database_1_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///
+        ///CREATE TABLE [dbo].[VersionInfo](
+        ///	[Version] [bigint] NOT NULL,
+        ///	[AppliedOn] [datetime] NULL,
+        ///	[Description] [nvarchar](1024) NULL
+        ///) ON [PRIMARY]
+        ///GO
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///CREATE TABLE [TABLE](
+        ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
+        ///	[column01] [nvarchar](50) NOT NULL,
+        ///	[column02] [int] NULL,
+        ///	[column_inteiro] [int] NULL,
+        ///	[id_TABLE_origin] [bigint] NULL,
+        /// CONSTRAINT [PK__TABLE__3213E83F48CFD27E] PRIMARY KEY [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string script_schema_test_migration_database_1_1 {
+            get {
+                return ResourceManager.GetString("script_schema_test_migration_database_1_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///
+        ///CREATE TABLE [dbo].[VersionInfo](
+        ///	[Version] [bigint] NOT NULL,
+        ///	[AppliedOn] [datetime] NULL,
+        ///	[Description] [nvarchar](1024) NULL
+        ///) ON [PRIMARY]
+        ///GO
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///CREATE TABLE [TABLE2](
+        ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
+        ///	[column] [nvarchar](255) NOT NULL,
+        /// CONSTRAINT [PK_TABLE2] PRIMARY KEY CLUSTERED 
+        ///(
+        ///	[id] ASC
+        ///)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLO [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string script_schema_test_migration_database_1_2 {
+            get {
+                return ResourceManager.GetString("script_schema_test_migration_database_1_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///
+        ///CREATE TABLE [dbo].[VersionInfo](
+        ///	[Version] [bigint] NOT NULL,
+        ///	[AppliedOn] [datetime] NULL,
+        ///	[Description] [nvarchar](1024) NULL
+        ///) ON [PRIMARY]
+        ///GO
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///CREATE TABLE [TABLE2](
+        ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
+        ///	[column] [nvarchar](255) NOT NULL,
+        /// CONSTRAINT [PK_TABLE2] PRIMARY KEY CLUSTERED 
+        ///(
+        ///	[id] ASC
+        ///)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLO [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string script_schema_test_migration_database_2_3 {
+            get {
+                return ResourceManager.GetString("script_schema_test_migration_database_2_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SET ANSI_NULLS ON
         ///GO
         ///SET QUOTED_IDENTIFIER ON
         ///GO
-        ///CREATE TABLE [TABELA](
+        ///CREATE TABLE [TABLE](
         ///	[id] [bigint] IDENTITY(1,1) NOT NULL PRIMARY KEY,
-        ///	[campo01] [nvarchar](50) NOT NULL,
-        ///	[campo02] [nvarchar](50) NOT NULL
+        ///	[column01] [nvarchar](50) NOT NULL,
+        ///	[column02] [nvarchar](50) NOT NULL
         ///)
         ///GO
-        ///CREATE TRIGGER [dbo].[tabela_trigger] ON [dbo].[TABELA] FOR INSERT AS
+        ///CREATE TRIGGER [dbo].[table_trigger] ON [dbo].[TABLE] FOR INSERT AS
         ///begin
         ///	select 1 
         ///end.
@@ -803,10 +952,10 @@ namespace Test.FluentMigrator.Test {
         ///GO
         ///SET QUOTED_IDENTIFIER ON
         ///GO
-        ///CREATE TABLE [TABELA](
+        ///CREATE TABLE [TABLE](
         ///	[id] [bigint] IDENTITY(1,1) NOT NULL PRIMARY KEY,
-        ///	[campo01] [nvarchar](50) NOT NULL,
-        ///	[campo02] [nvarchar](50) NOT NULL
+        ///	[column01] [nvarchar](50) NOT NULL,
+        ///	[column02] [nvarchar](50) NOT NULL
         ///)
         ///GO
         ///.

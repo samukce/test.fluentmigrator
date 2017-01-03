@@ -118,118 +118,136 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="script_data_test_migration_database_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_data_test_migration_database_1_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="script_data_test_migration_database_1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_data_test_migration_database_1_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="script_schema_column_different_precision_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_precision_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_precision_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_different_precision_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_precision_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_precision_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_different_size_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_size_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_size_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_different_size_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_size_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_size_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_different_type_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_type_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_type_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_different_type_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_different_type_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_different_type_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_missing_datababse_tocompare_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_missing_datababse_tocompare_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_missing_datababse_tocompare_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_missing_datababse_tocompare_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_missing_datababse_tocompare_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_missing_datababse_tocompare_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_missing_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_missing_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_missing_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_missing_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_missing_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_missing_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_found_identity_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_found_identity_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_found_identity_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_found_identity_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_found_identity_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_found_identity_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_included_indexe_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_included_indexe_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_included_indexe_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_included_indexe_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_included_indexe_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_included_indexe_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_included_unique_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_included_unique_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_included_unique_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_not_included_unique_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_not_included_unique_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_not_included_unique_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_nullable_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_nullable_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_nullable_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_nullable_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_nullable_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_nullable_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_scale_notequal_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_scale_notequal_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_scale_notequal_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_scale_notequal_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_scale_notequal_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_scale_notequal_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_unique_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_unique_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_unique_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_unique_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_unique_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_unique_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_value_default_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_value_default_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_value_default_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_column_value_default_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_column_value_default_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_column_value_default_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_foreign_key_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_foreign_key_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_foreign_key_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_foreign_key_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_foreign_key_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_foreign_key_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_indexe_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_indexe_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_indexe_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_indexe_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_indexe_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_indexe_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_and_column_missing_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_and_column_missing_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_and_column_missing_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_and_column_missing_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_and_column_missing_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_and_column_missing_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_a_diferent_schema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_a_diferent_schema.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_a_diferent_schema.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_b_diferent_schema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_b_diferent_schema.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_b_diferent_schema.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_tocompare_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_tocompare_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_tocompare_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_table_missing_database_tocompare_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_table_missing_database_tocompare_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_table_missing_database_tocompare_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="script_schema_test_migration_database_1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_schema_test_migration_database_1_0.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="script_schema_test_migration_database_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_schema_test_migration_database_1_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="script_schema_test_migration_database_1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_schema_test_migration_database_1_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="script_schema_test_migration_database_2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_schema_test_migration_database_2_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_trigger_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_trigger_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_trigger_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="script_schema_trigger_database_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources.scripts\script_schema_trigger_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+    <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_trigger_database_b.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
 </root>
