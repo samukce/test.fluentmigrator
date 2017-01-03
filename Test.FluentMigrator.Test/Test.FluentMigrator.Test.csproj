@@ -58,6 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="DowngradeDatabaseToSpecificVersionTest.cs" />
     <Compile Include="UpgradeDatabaseToSpecificVersionTest.cs" />
   </ItemGroup>
   <ItemGroup>
