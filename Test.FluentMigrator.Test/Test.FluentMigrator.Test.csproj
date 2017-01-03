@@ -59,6 +59,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="DowngradeDatabaseToSpecificVersionTest.cs" />
+    <Compile Include="ValidatingDataMigrationTest.cs" />
     <Compile Include="UpgradeDatabaseToSpecificVersionTest.cs" />
   </ItemGroup>
   <ItemGroup>

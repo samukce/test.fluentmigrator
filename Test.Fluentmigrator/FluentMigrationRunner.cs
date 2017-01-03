@@ -10,14 +10,12 @@ namespace Test.Fluentmigrator {
     public class FluentMigrationRunner {
 
         public void Run(int? versao, DatabaseInfo databaseInfo, string assemblyName = null) {
-            var connectionString = $@"Server={databaseInfo.ServerHostname};Database={databaseInfo.DatabaseName};User ID={databaseInfo.User};Password={databaseInfo.Password};";
-            
             var announcer = new TextWriterAnnouncer(OutputWriter) {
                 ShowSql = true,
                 ShowElapsedTime = true
             };
 
-            var processor = new SqlServer2008ProcessorFactory().Create(connectionString, announcer, new MigrationOptions());
+            var processor = new SqlServer2008ProcessorFactory().Create(databaseInfo.GetConnectionString(), announcer, new MigrationOptions());
 
             var assembly = string.IsNullOrWhiteSpace(assemblyName)
                 ? Assembly.GetExecutingAssembly()
