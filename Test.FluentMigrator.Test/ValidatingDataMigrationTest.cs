@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Diagnostics;
+using System.Reflection;
+using NUnit.Framework;
 using Test.Fluentmigrator;
 
 namespace Test.FluentMigrator.Test {
@@ -7,7 +10,7 @@ namespace Test.FluentMigrator.Test {
         [Test]
         public void ShouldMigrateToVersionThree() {
             var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_test_migration_database_1_2, Resources.script_data_test_migration_database_1_2)
-                                                 .ObjectiveDatabase(Resources.script_schema_test_migration_database_2_3);
+                                                         .ObjectiveDatabase(Resources.script_schema_test_migration_database_2_3);
 
             databaseTest.RunMigration(3, "Test.FluentMigrator.Test");
 

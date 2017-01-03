@@ -10,7 +10,7 @@ using FluentMigrator.Runner.Processors.SqlServer;
 namespace Test.Fluentmigrator {
     public class FluentMigrationRunner {
 
-        public void Run(int? versao, DatabaseInfo databaseInfo, string assemblyName = null, IEnumerable<string> tags = null) {
+        public void Run(int? version, DatabaseInfo databaseInfo, string assemblyName = null, IEnumerable<string> tags = null) {
             var announcer = new TextWriterAnnouncer(OutputWriter) {
                 ShowSql = true,
                 ShowElapsedTime = true
@@ -21,27 +21,27 @@ namespace Test.Fluentmigrator {
             var processor = new SqlServer2008ProcessorFactory().Create(databaseInfo.GetConnectionString(), announcer, migrationProcessorOptions);
 
             var assembly = string.IsNullOrWhiteSpace(assemblyName)
-                ? Assembly.GetExecutingAssembly()
-                : Assembly.Load(assemblyName);
+                             ? Assembly.GetExecutingAssembly()
+                             : Assembly.Load(assemblyName);
 
             var runnerContext = new RunnerContext(announcer) { Tags = tags };
 
             var runner = new MigrationRunner(assembly, runnerContext, processor);
 
-            if (versao == null) {
+            if (version == null) {
                 runner.MigrateUp(true);
 
                 return;
             }
 
-            var versaoAtual = runner.VersionLoader.VersionInfo.Latest();
+            var actualVersion = runner.VersionLoader.VersionInfo.Latest();
 
-            if (versaoAtual == versao) return;
+            if (actualVersion == version) return;
 
-            if (versaoAtual < versao) {
-                runner.MigrateUp(versao.Value, true);
+            if (actualVersion < version) {
+                runner.MigrateUp(version.Value, true);
             } else {
-                runner.MigrateDown(versao.Value, true);
+                runner.MigrateDown(version.Value, true);
             }
         }
 
