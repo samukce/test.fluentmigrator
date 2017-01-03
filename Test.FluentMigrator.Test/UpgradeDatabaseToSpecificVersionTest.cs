@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Test.Fluentmigrator;
+using Test.Fluentmigrator.Exceptions;
 
 namespace Test.FluentMigrator.Test {
     [TestFixture]
@@ -25,7 +26,7 @@ namespace Test.FluentMigrator.Test {
         }
 
         [Test]
-        public void ShouldMigrateToVersionTwo() {
+        public void ShouldMigrateFromZeroToVersionTwo() {
             var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_test_migration_database_1_0)
                                                 .ObjectiveDatabase(Resources.script_schema_test_migration_database_1_2);
 
@@ -42,6 +43,26 @@ namespace Test.FluentMigrator.Test {
             databaseTest.RunMigration(3, "Test.FluentMigrator.Test");
 
             Assert.DoesNotThrow(() => databaseTest.Compare());
+        }
+
+        [Test]
+        public void ShouldMigrateFromZeroToVersionFourWhenPutTag() {
+            var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_test_migration_database_1_0)
+                                                 .ObjectiveDatabase(Resources.script_schema_test_migration_database_2_4);
+
+            databaseTest.RunMigration(4, "Test.FluentMigrator.Test", new[] { "DEV" });
+
+            Assert.DoesNotThrow(() => databaseTest.Compare());
+        }
+
+        [Test]
+        public void ShouldNotMigrateFromZeroToVersionFourWhenNotPutTag() {
+            var databaseTest = new DatabaseTest().ActualDatabase(Resources.script_schema_test_migration_database_1_0)
+                                                 .ObjectiveDatabase(Resources.script_schema_test_migration_database_2_4);
+
+            databaseTest.RunMigration(4, "Test.FluentMigrator.Test");
+
+            Assert.Throws<MigrationFailedException>(() => databaseTest.Compare());
         }
     }
 }

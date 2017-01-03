@@ -244,6 +244,9 @@
   <data name="script_schema_test_migration_database_2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>resources.migration.scripts\script_schema_test_migration_database_2_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="script_schema_test_migration_database_2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources.migration.scripts\script_schema_test_migration_database_2_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="script_schema_trigger_database_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources.DatabaseParallelSqlServer.Scripts\script_schema_trigger_database_a.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>

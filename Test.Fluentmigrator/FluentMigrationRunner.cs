@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using FluentMigrator;
 using FluentMigrator.Runner;
@@ -9,19 +10,23 @@ using FluentMigrator.Runner.Processors.SqlServer;
 namespace Test.Fluentmigrator {
     public class FluentMigrationRunner {
 
-        public void Run(int? versao, DatabaseInfo databaseInfo, string assemblyName = null) {
+        public void Run(int? versao, DatabaseInfo databaseInfo, string assemblyName = null, IEnumerable<string> tags = null) {
             var announcer = new TextWriterAnnouncer(OutputWriter) {
                 ShowSql = true,
                 ShowElapsedTime = true
             };
 
-            var processor = new SqlServer2008ProcessorFactory().Create(databaseInfo.GetConnectionString(), announcer, new MigrationOptions());
+            var migrationProcessorOptions = new MigrationOptions();
+
+            var processor = new SqlServer2008ProcessorFactory().Create(databaseInfo.GetConnectionString(), announcer, migrationProcessorOptions);
 
             var assembly = string.IsNullOrWhiteSpace(assemblyName)
                 ? Assembly.GetExecutingAssembly()
                 : Assembly.Load(assemblyName);
 
-            var runner = new MigrationRunner(assembly, new RunnerContext(announcer), processor);
+            var runnerContext = new RunnerContext(announcer) { Tags = tags };
+
+            var runner = new MigrationRunner(assembly, runnerContext, processor);
 
             if (versao == null) {
                 runner.MigrateUp(true);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -33,14 +34,14 @@ namespace Test.Fluentmigrator {
             return this;
         }
 
-        public DatabaseTest RunMigration(int? specificVersion, string assemblyName = null) {
-            new FluentMigrationRunner().Run(specificVersion, GetActualDatabaseInfo(), assemblyName);
+        public DatabaseTest RunMigration(int? specificVersion, string assemblyName = null, IEnumerable<string> tags = null) {
+            new FluentMigrationRunner().Run(specificVersion, GetActualDatabaseInfo(), assemblyName, tags);
 
             return this;
         }
 
         public void Compare(bool allErrors = true) {
-            Parallel.Perform(GetActualDatabaseInfo(),GetObjectiveDatabaseInfo(), allErrors);
+            Parallel.Perform(GetActualDatabaseInfo(), GetObjectiveDatabaseInfo(), allErrors);
         }
 
         public void ExecuteCommandActualDatabase(Action<IDbCommand> command) {

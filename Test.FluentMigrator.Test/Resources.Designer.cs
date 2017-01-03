@@ -71,7 +71,9 @@ namespace Test.FluentMigrator.Test {
         
         /// <summary>
         ///   Looks up a localized string similar to INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (1, CAST(0x0000A10E013D7DBC AS DateTime))
-        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (2, CAST(0x0000A10E013D7DBC AS DateTime)).
+        ///INSERT [VersionInfo] ([Version], [AppliedOn]) VALUES (2, CAST(0x0000A10E013D7DBC AS DateTime))
+        ///
+        ///INSERT [TABLE] ([column01]) VALUES (&apos;Content before migration&apos;).
         /// </summary>
         internal static string script_data_test_migration_database_1_2 {
             get {
@@ -819,7 +821,7 @@ namespace Test.FluentMigrator.Test {
         ///	[column01] [nvarchar](255) NOT NULL,
         ///	[column02] [nvarchar](255) NULL,
         ///	[columnInt] [int] NULL,
-        ///	[column_data] [datetime] NULL,
+        ///	[column_date] [datetime] NULL,
         ///	[id_TABLE_origin] [bigint] NULL,
         /// CONSTRAINT  [rest of string was truncated]&quot;;.
         /// </summary>
@@ -851,7 +853,7 @@ namespace Test.FluentMigrator.Test {
         ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
         ///	[column01] [nvarchar](50) NOT NULL,
         ///	[column02] [int] NULL,
-        ///	[column_inteiro] [int] NULL,
+        ///	[column_integer] [int] NULL,
         ///	[id_TABLE_origin] [bigint] NULL,
         /// CONSTRAINT [PK__TABLE__3213E83F48CFD27E] PRIMARY KEY [rest of string was truncated]&quot;;.
         /// </summary>
@@ -922,6 +924,38 @@ namespace Test.FluentMigrator.Test {
         internal static string script_schema_test_migration_database_2_3 {
             get {
                 return ResourceManager.GetString("script_schema_test_migration_database_2_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///
+        ///CREATE TABLE [dbo].[VersionInfo](
+        ///	[Version] [bigint] NOT NULL,
+        ///	[AppliedOn] [datetime] NULL,
+        ///	[Description] [nvarchar](1024) NULL
+        ///) ON [PRIMARY]
+        ///GO
+        ///SET ANSI_NULLS ON
+        ///GO
+        ///SET QUOTED_IDENTIFIER ON
+        ///GO
+        ///CREATE TABLE [TABLE2](
+        ///	[id] [bigint] IDENTITY(1,1) NOT NULL,
+        ///	[column] [nvarchar](255) NOT NULL,
+        /// CONSTRAINT [PK_TABLE2] PRIMARY KEY CLUSTERED 
+        ///(
+        ///	[id] ASC
+        ///)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLO [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string script_schema_test_migration_database_2_4 {
+            get {
+                return ResourceManager.GetString("script_schema_test_migration_database_2_4", resourceCulture);
             }
         }
         
