@@ -10,7 +10,7 @@ using FluentMigrator.Runner.Processors.SqlServer;
 namespace Test.Fluentmigrator {
     public class FluentMigrationRunner {
 
-        public void Run(int? version, DatabaseInfo databaseInfo, string assemblyName = null, IEnumerable<string> tags = null) {
+        public void Run(long? version, DatabaseInfo databaseInfo, string assemblyName = null, IEnumerable<string> tags = null) {
             var announcer = new TextWriterAnnouncer(OutputWriter) {
                 ShowSql = true,
                 ShowElapsedTime = true

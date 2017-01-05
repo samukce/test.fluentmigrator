@@ -34,7 +34,7 @@ namespace Test.Fluentmigrator {
             return this;
         }
 
-        public DatabaseTest RunMigration(int? specificVersion, string assemblyName = null, IEnumerable<string> tags = null) {
+        public DatabaseTest RunMigration(long? specificVersion, string assemblyName = null, IEnumerable<string> tags = null) {
             new FluentMigrationRunner().Run(specificVersion, GetActualDatabaseInfo(), assemblyName, tags);
 
             return this;
