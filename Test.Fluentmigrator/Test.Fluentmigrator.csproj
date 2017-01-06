@@ -57,6 +57,7 @@
     <Compile Include="Exceptions\ColumnDifferentSizeException.cs" />
     <Compile Include="Exceptions\ColumnIdentityPropertyNotFoundException.cs" />
     <Compile Include="Exceptions\ColumnDefaultValuePropertyDifferentException.cs" />
+    <Compile Include="Exceptions\MigrationsNotFoundException.cs" />
     <Compile Include="Exceptions\TriggerNotFoundException.cs" />
     <Compile Include="Exceptions\ForeignKeyNotFoundException.cs" />
     <Compile Include="Exceptions\ColumnNotFoundException.cs" />

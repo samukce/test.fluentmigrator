@@ -34,12 +34,21 @@ namespace Test.Fluentmigrator {
             return this;
         }
 
-        public DatabaseTest RunMigration(long? specificVersion, string assemblyName = null, IEnumerable<string> tags = null) {
-            new FluentMigrationRunner().Run(specificVersion, GetActualDatabaseInfo(), assemblyName, tags);
+        public DatabaseTest RunMigration(long? version, string assemblyName = null, IEnumerable<string> tags = null) {
+            new FluentMigrationRunner().Run(version, GetActualDatabaseInfo(), assemblyName, tags);
 
             return this;
         }
 
+        public DatabaseTest RevertMigrationBefore(long version, string assemblyName, IEnumerable<string> tags = null) {
+            new FluentMigrationRunner().RevertMigrationBefore(version, GetActualDatabaseInfo(), assemblyName, tags);
+            return this;
+        }
+
+        /// <summary>
+        /// Compare the Actual with Objective database. If found any difference will be throw exception with details these differences.
+        /// </summary>
+        /// <param name="allErrors">if false on the first difference between databases will throw exception.</param>
         public void Compare(bool allErrors = true) {
             Parallel.Perform(GetActualDatabaseInfo(), GetObjectiveDatabaseInfo(), allErrors);
         }
