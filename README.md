@@ -8,14 +8,14 @@ First of all, create test for your migration before implement your migration (Th
 
 Create the script file of the database before the migration and then create a secod script file after the migration;
 
-Script file before the migration to a file schema_0.sql.
+1. Script file before the migration to a file schema_0.sql.
 ```sql
 CREATE TABLE [dbo].[Example](
 	[Id] [bigint] NOT NULL
 )
 ```
 
-Script file after runed the migration to a file schema_1.sql. (Description column was added.) :
+2. Script file after runed the migration to a file schema_1.sql. (Description column was added.) :
 ```sql
 CREATE TABLE [dbo].[Example](
 	[Id] [bigint] NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Example](
 )
 ```
 
-After this, create the test
+3. After this, create the test
 ```csharp
 [Test]
 public void ShouldMigrateToVersionOne() {
