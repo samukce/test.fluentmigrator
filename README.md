@@ -30,7 +30,7 @@ public void ShouldMigrateToVersionOne() {
     var databaseTest = new DatabaseTest().ActualDatabase(Resources.schema_0)
                                          .ObjectiveDatabase(Resources.schema_1);
 
-    databaseTest.RunMigration(1, "Test.FluentMigrator.Test");
+    databaseTest.RunMigration(1, "AssemblyNameProjectWithTheFluentMigration");
 
     Assert.DoesNotThrow(() => databaseTest.Compare());
 }
