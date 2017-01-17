@@ -8,14 +8,14 @@ First of all, create test for your migration before implement your migration (Th
 
 Create the script file of the database before the migration and then create a secod script file after the migration;
 
-1. Script file before the migration to a file schema_0.sql.
+1. Create a script file in our test project before the migration to a file schema_0.sql.
 ```sql
 CREATE TABLE [dbo].[Example](
 	[Id] [bigint] NOT NULL
 )
 ```
 
-2. Script file after runed the migration to a file schema_1.sql. (Description column was added.) :
+2. Create a script file in our test project after runed the migration to a file schema_1.sql. (i.e. The description column was added.) :
 ```sql
 CREATE TABLE [dbo].[Example](
 	[Id] [bigint] NOT NULL,
