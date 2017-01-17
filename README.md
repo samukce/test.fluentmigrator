@@ -1,4 +1,4 @@
-# Test.Fluentmigrator 1.0.0
+# Test.Fluentmigrator
 
 A simply tool to facility *TDD* in database migration using [FluentMigrator](https://github.com/schambers/fluentmigrator).
 
